@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/hugginsio/dev/compare/v1.0.0...v1.0.1) (2025-08-02)
+
+
+### Bug Fixes
+
+* update goreleaser version ([#4](https://github.com/hugginsio/dev/issues/4)) ([1ec8318](https://github.com/hugginsio/dev/commit/1ec83180dd8048feb7f6d03f253bdeef99154325))
+
 ## 1.0.0 (2025-08-02)
 
 
