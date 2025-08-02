@@ -1,13 +1,10 @@
 # yaml-language-server: $schema=https://goreleaser.com/static/schema.json
 # https://goreleaser.com
-
 version: 2
 project_name: dev
-
 before:
   hooks:
     - go mod tidy
-
 builds:
   - id: "dev"
     main: "./cmd/dev"
@@ -31,7 +28,6 @@ builds:
         goarch: "arm64"
       - goos: windows
         goarch: "386"
-
 archives:
   - formats: ["tar.gz"]
     # this name template makes the OS and Arch compatible with the results of `uname`.
@@ -39,10 +35,8 @@ archives:
     format_overrides:
       - goos: windows
         formats: ["zip"]
-
 changelog:
   disable: true
-
 release:
   mode: keep-existing
   github:
@@ -50,7 +44,6 @@ release:
     name: dev
   target_commitish: "{{ .Commit }}"
   include_meta: false
-
 brews:
   - repository:
       owner: hugginsio
