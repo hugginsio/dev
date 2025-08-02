@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.2.0](https://github.com/hugginsio/dev/compare/v1.1.0...v1.2.0) (2025-08-02)
+
+
+### Features
+
+* externalize handler and port acquisition ([#14](https://github.com/hugginsio/dev/issues/14)) ([5267a48](https://github.com/hugginsio/dev/commit/5267a48c26b2c4d46a4817603789bc772f841a1f))
+
+
+### Bug Fixes
+
+* ignore goreleaser dir ([#16](https://github.com/hugginsio/dev/issues/16)) ([8f48e6d](https://github.com/hugginsio/dev/commit/8f48e6d3d294e48add0dd30f8ca2786e070e0760))
+
 ## [1.1.0](https://github.com/hugginsio/dev/compare/v1.0.1...v1.1.0) (2025-08-02)
 
 
