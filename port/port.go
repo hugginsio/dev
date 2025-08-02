@@ -1,7 +1,8 @@
 // Copyright (c) Kyle Huggins
 // SPDX-License-Identifier: BSD-3-Clause
 
-package main
+// Port provides a utility for local port acquisition.
+package port
 
 import (
 	"fmt"
@@ -9,7 +10,9 @@ import (
 	"strconv"
 )
 
-func acquirePort(startPort int) (int, error) {
+// Acquire attempts to bind a local port. If the specified port is unavailable, it will retry until
+// either a port is found or port 65535 is reached. If no available ports are found, an error will be returned.
+func Acquire(startPort int) (int, error) {
 	for port := startPort; port < 65535; port++ {
 		addr := net.JoinHostPort("", strconv.Itoa(port))
 		listener, err := net.Listen("tcp", addr)
