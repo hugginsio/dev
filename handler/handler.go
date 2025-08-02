@@ -1,7 +1,8 @@
 // Copyright (c) Kyle Huggins
 // SPDX-License-Identifier: BSD-3-Clause
 
-package main
+// Handler provides a custom HttpHandler for responding to HTTP requests.
+package handler
 
 import (
 	"net/http"
@@ -9,17 +10,18 @@ import (
 	"path/filepath"
 )
 
-type devHandler struct {
-	dir string
+// ServeHandler is a custom HttpHandler with 404.html support and automatic directory browser generation.
+type ServeHandler struct {
+	Directory string // The root directory to serve content from.
 }
 
-func (d *devHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	filePath := filepath.Join(d.dir, r.URL.Path)
+func (m *ServeHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+	filePath := filepath.Join(m.Directory, r.URL.Path)
 
 	filePath = filepath.Clean(filePath)
 
 	if _, err := os.Stat(filePath); os.IsNotExist(err) {
-		notFoundPath := filepath.Join(d.dir, "404.html")
+		notFoundPath := filepath.Join(m.Directory, "404.html")
 		if content, err := os.ReadFile(notFoundPath); err == nil {
 			w.Header().Set("Content-Type", "text/html; charset=utf-8")
 			w.WriteHeader(http.StatusNotFound)
@@ -38,7 +40,7 @@ func (d *devHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 
-		http.FileServer(http.Dir(d.dir)).ServeHTTP(w, r)
+		http.FileServer(http.Dir(m.Directory)).ServeHTTP(w, r)
 		return
 	}
 

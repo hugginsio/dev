@@ -33,3 +33,14 @@ Options:
   -port int
         Port to bind server to (default 8000)
 ```
+
+If you are not looking for a dedicated command line tool, the custom `HttpHandler` and port
+acquisition logic can be imported for use in your own Go programs:
+
+```
+go get github.com/hugginsio/dev
+```
+
+In your Go program, you can import `github.com/hugginsio/dev/handler` or `github.com/hugginsio/dev/port`.
+
+Documentation is available on [Go Packages](https://pkg.go.dev/github.com/hugginsio/dev).

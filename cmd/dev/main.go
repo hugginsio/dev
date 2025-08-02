@@ -10,6 +10,8 @@ import (
 	"os"
 
 	version "github.com/caarlos0/go-version"
+	"github.com/hugginsio/dev/handler"
+	"github.com/hugginsio/dev/port"
 )
 
 type Config struct {
@@ -26,7 +28,7 @@ func main() {
 		os.Exit(http.StatusBadRequest)
 	}
 
-	port, err := acquirePort(config.port)
+	port, err := port.Acquire(config.port)
 	if err != nil {
 		slog.Error("failed to find available port", "err", err.Error())
 		os.Exit(http.StatusInternalServerError)
@@ -36,7 +38,7 @@ func main() {
 		slog.Warn("port unavailable, switching", "port", port)
 	}
 
-	handler := &devHandler{dir: config.dir}
+	handler := &handler.ServeHandler{Directory: config.dir}
 	addr := fmt.Sprintf(":%d", port)
 	server := &http.Server{
 		Addr:    addr,
