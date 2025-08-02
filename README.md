@@ -10,6 +10,16 @@ Alternatively: I got tired of using `python3 -m http.server`.
 - On-the-fly directory listing whenever no `index.html` present
 - No more `OSError: Address already in use`: it will retry with every port up to 65535
 
+## Installation
+
+`dev` is available in Homebrew:
+
+```
+brew install hugginsio/tap/dev
+```
+
+Alternatively, you can download binaries for your platform from [the latest release](https://github.com/hugginsio/dev/releases/latest).
+
 ## Usage
 
 ```
