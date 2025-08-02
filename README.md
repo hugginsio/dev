@@ -15,8 +15,8 @@ Usage: dev [options]
 A simple static file server for local development.
 
 Options:
-  -d string
-        Directory to serve files from (shorthand) (default ".")
   -dir string
         Directory to serve files from (default ".")
+  -port int
+        Port to bind server to (default 8000)
 ```
