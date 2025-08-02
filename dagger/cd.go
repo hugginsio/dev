@@ -29,7 +29,7 @@ func (m *Dev) ReleaseCli(
 	source := dag.Git("https://github.com/hugginsio/dev.git", dagger.GitOpts{KeepGitDir: true}).Tag(tag).Tree()
 
 	return dag.Container().
-		From("ghcr.io/goreleaser/goreleaser:v2.8.2").
+		From("ghcr.io/goreleaser/goreleaser:v2.11.2").
 		WithSecretVariable("GITHUB_TOKEN", token).
 		WithMountedCache("/go/pkg/mod/", dag.CacheVolume("go-mod-124")).
 		WithEnvVariable("GOMODCACHE", "/go/pkg/mod").
