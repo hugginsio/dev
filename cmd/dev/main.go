@@ -8,6 +8,8 @@ import (
 	"log/slog"
 	"net/http"
 	"os"
+
+	version "github.com/caarlos0/go-version"
 )
 
 type Config struct {
@@ -17,7 +19,7 @@ type Config struct {
 
 func main() {
 	config := parseFlags()
-	slog.Info("dev is starting", "dir", config.dir, "port", config.port)
+	slog.Info("dev is starting", "dir", config.dir, "port", config.port, "version", version.GetVersionInfo().GitVersion)
 
 	if _, err := os.Stat(config.dir); os.IsNotExist(err) {
 		slog.Error("directory does not exist", "err", err.Error())
