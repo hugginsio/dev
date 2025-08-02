@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.1.0](https://github.com/hugginsio/dev/compare/v1.0.1...v1.1.0) (2025-08-02)
+
+
+### Features
+
+* **renovate:** explicitly enable dashboard ([#9](https://github.com/hugginsio/dev/issues/9)) ([4ddd9bc](https://github.com/hugginsio/dev/commit/4ddd9bc0f21df7aa3ead08c8bf94c5303df3a2db))
+* update dagger, add version details ([#13](https://github.com/hugginsio/dev/issues/13)) ([e8d7490](https://github.com/hugginsio/dev/commit/e8d7490b14f5b4f3b5ecbbca04303cc70224e530))
+* update GitHub Actions ([#12](https://github.com/hugginsio/dev/issues/12)) ([b5fc2ec](https://github.com/hugginsio/dev/commit/b5fc2ecfcc9ebeb7c6c1a2147ea079846fb411e0))
+* update readme, add renovate ([#6](https://github.com/hugginsio/dev/issues/6)) ([256afe8](https://github.com/hugginsio/dev/commit/256afe8e140338f4d3fac3252b903dce78baf372))
+
+
+### Bug Fixes
+
+* **deps:** update module github.com/99designs/gqlgen to v0.17.78 ([#8](https://github.com/hugginsio/dev/issues/8)) ([6cbd5de](https://github.com/hugginsio/dev/commit/6cbd5dea38477bc0e83c3a04fcded9b5cd114cd8))
+* **deps:** update module github.com/vektah/gqlparser/v2 to v2.5.30 ([#10](https://github.com/hugginsio/dev/issues/10)) ([0586da3](https://github.com/hugginsio/dev/commit/0586da362f360e74e0da0f25e1776a28291c648e))
+
 ## [1.0.1](https://github.com/hugginsio/dev/compare/v1.0.0...v1.0.1) (2025-08-02)
 
 
