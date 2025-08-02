@@ -10,6 +10,7 @@ import (
 	"os"
 
 	version "github.com/caarlos0/go-version"
+	"github.com/hugginsio/dev/handler"
 )
 
 type Config struct {
@@ -36,7 +37,7 @@ func main() {
 		slog.Warn("port unavailable, switching", "port", port)
 	}
 
-	handler := &devHandler{dir: config.dir}
+	handler := &handler.ServeHandler{Directory: config.dir}
 	addr := fmt.Sprintf(":%d", port)
 	server := &http.Server{
 		Addr:    addr,
