@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/hugginsio/dev/compare/v1.2.0...v1.2.1) (2025-11-16)
+
+
+### Bug Fixes
+
+* **deps:** update module github.com/caarlos0/go-version to v0.2.2 ([#17](https://github.com/hugginsio/dev/issues/17)) ([ba93f18](https://github.com/hugginsio/dev/commit/ba93f18e673ea05cf8a73fd3c9e47cecd4fd8cf3))
+
 ## [1.2.0](https://github.com/hugginsio/dev/compare/v1.1.0...v1.2.0) (2025-08-02)
 
 
